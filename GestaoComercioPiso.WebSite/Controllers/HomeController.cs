@@ -39,12 +39,20 @@ namespace GestaoComercioPiso.WebSite.Controllers
             return View();
         }
 
+        [HttpGet]
+        [Route("~/contato")]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Minha página de contato.";
-
+            /*ViewBag.Message = "Minha página de contato.";
             ViewData.Add(new KeyValuePair<string, object>("Mensagem", "mensagem via viewData"));
+            */
+            return View();
+        }
 
+        [HttpPost]
+        [Route("~/contato")]
+        public ActionResult Contact(FormCollection model)
+        {
             return View();
         }
     }
